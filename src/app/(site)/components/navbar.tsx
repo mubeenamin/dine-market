@@ -19,14 +19,14 @@ import { ShoppingCart } from "lucide-react";
 export default function NavBar() {
   return (
     <main>
-      <div className="sm:flex sm:justify-between h-10 items-center text-xl py-12">
+      <div className="flex justify-between h-10 items-center text-xl py-12">
         <div>
           <Link href={"/"}>
             {" "}
             <Image src="/Logo.webp" height={100} width={150} alt="logo" />
           </Link>
         </div>
-        <NavigationMenu className="hidden sm:block">
+        <NavigationMenu className="hidden md:block">
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link href="/female">
@@ -58,15 +58,16 @@ export default function NavBar() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <div className="flex gap-x-2 items-center">
+        <div className=" hidden md:flex md:gap-x-2 md:items-center">
           <div>
             <Input type="input" placeholder="search" />
           </div>
-          <div className="p-2 rounded-full bg-slate-200">
-            
-              <ShoppingCart />
-            
-          </div>
+          <button className="relative p-3 rounded-full bg-slate-200 ">
+            <ShoppingCart />
+            <span className="absolute top-0 w-5 h-5 bg-red-500 rounded-full text-center text-white text-xs">
+              0
+            </span>
+          </button>
         </div>
       </div>
     </main>
