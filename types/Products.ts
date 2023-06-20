@@ -5,6 +5,9 @@ export type Products = {
   createdAt: Date;
   name: string;
   slug: string;
+  subcategory:string;
+  price:string,
+  currency:string,
   image: string;
   content: PortableTextBlock[];
 }

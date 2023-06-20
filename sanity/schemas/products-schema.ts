@@ -18,7 +18,27 @@ const products = {
         name: "category",
         title: "Category",
         type: "string",
-        options: { source: "name" }
+        options:{
+          list:["Women","Men","Kids"]
+        }
+      },
+      {
+        name: "subcategory",
+        title: "SubCategory",
+        type: "string",
+      },
+      {
+        name: "price",
+        title: "Price",
+        type: "number",
+      },
+      {
+        name: "currency",
+        title: "Currency",
+        type: "string",
+        options:{
+          list:["Rs","$"]
+        }
       },
       {
         name: "image",
